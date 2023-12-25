@@ -46,14 +46,12 @@ for turtle_index in range(0,6):
     row+=30
     
   
-while True:
-    finish_line_reached=check_pos(turtles) 
-    if finish_line_reached:
-        break
+while not finish_line_reached:
+     
     for turtle in turtles:
         pace=random_pace()
         turtle_race(turtle,pace)   
 
-      
+    finish_line_reached=check_pos(turtles)  
                
 screen.exitonclick()
